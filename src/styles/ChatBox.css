@@ -1,0 +1,157 @@
+/* Style for the chat window */
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px; /* Adjust global font size */
+  box-sizing: border-box;
+}
+.chat-message.ai {
+  background-color: #444;
+  color: white;
+}
+.chat-window {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.person-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.person-name h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.person-name p {
+  font-size: 14px;
+  color: #888;
+}
+
+.chat-box {
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.chat-message {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.chat-message.user {
+  background-color: #007bff;
+  color: white;
+  text-align: right;
+}
+
+.chat-message.ai {
+  background-color: #6c757d;
+  color: white;
+}
+
+.timestamp {
+  font-size: 0.75rem;
+  color: gray;
+}
+
+.chat-input-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.chat-input {
+  width: 80%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.send-btn {
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.send-btn:hover {
+  background-color: #218838;
+}
+/* Align user and AI messages */
+.chat-message.user {
+  align-self: flex-end;
+  text-align: right;
+  max-width: 60%;
+  margin-left: auto;
+  font-size: 0.9rem; /* smaller font size */
+}
+
+.chat-message.ai {
+  align-self: flex-start;
+  text-align: left;
+  max-width: 60%;
+  margin-right: auto;
+  font-size: 0.9rem; /* smaller font size */
+}
+
+/* Make timestamp visible under the message */
+.timestamp {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.7rem;
+  color: #ccc; /* lighter color for visibility */
+  text-align: right;
+}
+/* Typing Indicator Animation */
+.typing-indicator {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 20px;
+  margin-top: 6px;
+}
+
+.typing-indicator span {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #ccc;
+  border-radius: 50%;
+  animation: blink 1.4s infinite both;
+}
+
+.typing-indicator span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0%, 80%, 100% {
+    opacity: 0.2;
+    transform: scale(0.9);
+  }
+  40% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

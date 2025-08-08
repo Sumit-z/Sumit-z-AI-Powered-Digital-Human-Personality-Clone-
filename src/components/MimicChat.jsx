@@ -34,7 +34,7 @@ export default function CloneUpload() {
 
   const handleSubmit = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/clone", {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/clone`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
